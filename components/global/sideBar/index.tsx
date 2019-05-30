@@ -139,12 +139,11 @@ const SideBar: React.SFC<Props> = ({}) => {
         </div>
         <div className="clearfix" />
       </div>
-
-      <div className="widget advertising">
+      {/* <div className="widget advertising">
         <div className="advertising-container">
           <img src="/static/images/350x300.png" alt="banner 350x300" />
         </div>
-      </div>
+      </div> */}
       <div className="widget newsletter">
         <h3 className="widget-title">Newsletter</h3>
         <div className="newsletter-container">

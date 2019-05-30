@@ -19,8 +19,6 @@ const MainLayout: React.SFC<Props> = ({
   router,
   children,
 }) => {
-  const { asPath } = router;
-
   return (
     <>
       <Head
@@ -67,7 +65,7 @@ const MainLayout: React.SFC<Props> = ({
             The blog Created by terry Copyright @{new Date().getFullYear()}
           </span>
           <span className="backtotop">
-            TOP <i className="icon-arrow-up7" />
+            TOP <i className="iconfont icon-backtop" />
           </span>
           <div className="clearfix" />
         </div>

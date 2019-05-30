@@ -9,10 +9,10 @@ const Navigation: React.SFC<Props> = ({}) => {
   return (
     <div className="navigation">
       <a href="#" className="prev">
-        <i className="icon-arrow-left8" /> Previous Posts
+        <i className="iconfont icon-left" /> Previous Posts
       </a>
       <a href="#" className="next">
-        Next Posts <i className="icon-arrow-right8" />
+        Next Posts <i className="iconfont icon-right" />
       </a>
       <div className="clearfix" />
     </div>

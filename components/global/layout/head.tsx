@@ -19,6 +19,7 @@ const Head: React.SFC<Props> = ({ title, description, url, ogImage }) => (
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:url" content={url || defaultOGURL} />
     <meta property="og:title" content={title || ''} />
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_753476_pl22ywdqrba.css"/>
     <meta
       property="og:description"
       content={description || defaultDescription}
