@@ -11,7 +11,6 @@ const withCSS = require('@zeit/next-css');
 const withSass = require('@zeit/next-sass');
 const withBundleAnalyzer = require('@zeit/next-bundle-analyzer');
 const nextRuntimeDotenv = require('next-runtime-dotenv');
-const { PHASE_PRODUCTION_BUILD } = require('next/constants');
 
 const withConfig = nextRuntimeDotenv({
   public: ['API_URL'],
@@ -22,29 +21,8 @@ if (typeof require !== 'undefined') {
   // eslint-disable-next-line node/no-deprecated-api
   require.extensions['.less'] = file => {};
 }
-
 module.exports = withPlugins(
-  [
-    [withTypescript],
-    [withCSS],
-    [
-      withCSS,
-      {
-        // cssModules: true,
-        cssLoaderOptions: {
-          localIdentName: '[path]___[local]___[hash:base64:5]',
-        },
-        [PHASE_PRODUCTION_BUILD]: {
-          cssLoaderOptions: {
-            localIdentName: '[hash:base64:8]',
-          },
-        },
-      },
-    ],
-    [withSass],
-    [withConfig],
-    [withBundleAnalyzer],
-  ],
+  [[withTypescript], [withCSS], [withSass], [withConfig], [withBundleAnalyzer]],
   {
     analyzeServer: ['server', 'both'].includes(process.env.BUNDLE_ANALYZE),
     analyzeBrowser: ['browser', 'both'].includes(process.env.BUNDLE_ANALYZE),

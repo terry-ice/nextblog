@@ -1,6 +1,5 @@
 import * as React from 'react';
 import NextHead from 'next/head';
-
 const defaultDescription = '';
 const defaultOGURL = '';
 const defaultOGImage = '';
@@ -18,7 +17,6 @@ const Head: React.SFC<Props> = ({ title, description, url, ogImage }) => (
     <title>{title || ''}</title>
     <meta name="description" content={description || defaultDescription} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/static/css/bootstrap.css" />
     <meta property="og:url" content={url || defaultOGURL} />
     <meta property="og:title" content={title || ''} />
     <meta
