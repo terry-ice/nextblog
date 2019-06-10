@@ -75,7 +75,7 @@
     "qs": "^6.6.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
-    "react-i18next": "^10.0.4",
+    "react-i18next": "^10.11.0",
     "react-redux": "^6.0.0",
     "react-test-renderer": "^16.8.1",
     "recompose": "^0.30.0",
